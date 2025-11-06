@@ -99,6 +99,7 @@ button {
   color: white;
   background-color: #4D96A9;
   border: none;
+  font-weight: 900;
 }
 
 header {}
@@ -127,4 +128,43 @@ p {
   font-size: 1rem;
   font-weight: 500;
   line-height: 150%;
+}
+
+header p {
+  margin-block: 24px;
+}
+
+header button:nth-of-type(1) span {
+  color: var(--cyan-300);
+}
+
+header button:nth-of-type(2) {
+  margin-top: 16px;
+  background-color: var(--purple-600);
+}
+
+section:first-of-type {
+  padding-top: 32px;
+  padding-bottom: 64px;
+}
+
+.vl {
+  border-left: 1px solid var(--slate-300);
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}
+
+section .counter {
+  color: var(--slate-600);
+  font-size: 1rem;
+  line-height: 150%;
+  font-weight: 900;
+  padding: 16px 19px;
+  border-radius: 50%;
+  border: 2px solid var(--slate-300);
+  width: min-content;
+  margin-inline: auto;
 }
