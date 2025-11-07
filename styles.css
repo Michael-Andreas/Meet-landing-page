@@ -87,7 +87,7 @@ h6 {
 
 body {
   font-family: "Red Hat Display";
-  padding: 48px 32px 64px;
+  padding: 48px 32px 0 32px;
   text-align: center;
 }
 
@@ -140,6 +140,7 @@ header button:nth-of-type(1) span {
 
 header button:nth-of-type(2) {
   margin-top: 16px;
+  margin-bottom: 32px;
   background-color: var(--purple-600);
 }
 
@@ -150,11 +151,14 @@ section:first-of-type {
 
 .vl {
   border-left: 1px solid var(--slate-300);
-  height: 100px;
-  position: absolute;
+  height: 80px;
+  position: relative;
   left: 50%;
-  margin-left: -3px;
-  top: 0;
+  width: min-content;
+}
+
+.second-vl {
+  position: absolute;
 }
 
 section .counter {
@@ -167,4 +171,41 @@ section .counter {
   border: 2px solid var(--slate-300);
   width: min-content;
   margin-inline: auto;
+}
+
+.second-counter {
+  transform: translateY(-50%);
+  background-color: white;
+}
+
+.images-container {
+  margin-block: 64px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .images-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+h3 {
+  color: var(--cyan-600);
+  font-size: .75rem;
+  font-weight: 900;
+  line-height: 110%;
+}
+
+h2 {
+  color: var(--slate-900);
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 110%;
+  margin: 16px 0 32px 0;
+}
+
+section:nth-of-type(2) {
+  background-image: url("./assets/mobile/image-footer.jpg");
 }
