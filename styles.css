@@ -166,6 +166,7 @@ section:first-of-type {
 
 .second-vl {
   position: absolute;
+
 }
 
 section .counter {
@@ -218,5 +219,28 @@ h2 {
 }
 
 section:nth-of-type(2) {
-  background-image: url("./assets/mobile/image-footer.jpg");
+  position: relative;
+  margin-left: -32px;
+  margin-right: -32px;
+  padding: 0 32px 64px 32px;
+
+  h2 {
+    color: white;
+  }
+
+  p {
+    color: white;
+  }
+
+  button {
+    color: white;
+  }
+}
+
+picture {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
 }
