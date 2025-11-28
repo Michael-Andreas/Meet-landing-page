@@ -106,6 +106,10 @@ button {
   &:hover {
     background-color: #71C0D4;
   }
+
+  span {
+    margin-left: .25rem;
+  }
 }
 
 header {}
@@ -176,7 +180,6 @@ section:first-of-type {
 
 .second-vl {
   position: absolute;
-
 }
 
 section .counter {
@@ -230,9 +233,9 @@ h2 {
 
 section:nth-of-type(2) {
   position: relative;
+  padding: 0 0 64px 0;
   margin-left: -32px;
   margin-right: -32px;
-  padding: 0 32px 64px 32px;
 
   h2 {
     color: white;
@@ -245,15 +248,39 @@ section:nth-of-type(2) {
   button {
     margin-top: 24px;
     color: white;
+    background-color: var(--purple-600);
+
+    span {
+      color: var(--purple-300);
+    }
   }
 }
 
 picture {
+  margin-left: -32px;
+  margin-right: -32px;
+}
+
+picture::after {
+  content: "";
   position: absolute;
   inset: 0;
+  background: var(--cyan-600);
+  pointer-events: none;
+  opacity: 0.85;
   z-index: -1;
+}
+
+picture img {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
   width: 100%;
   height: 100%;
-  object-fit: fill;
-  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+}
+
+.footer-content {
+  padding-inline: 32px;
 }
